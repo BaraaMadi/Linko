@@ -19,6 +19,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  min-height: 100%;
+}
 
 /* MENU STYLES */
 .menu-wrap {
@@ -247,15 +250,15 @@ h3 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 600px;
+  height: 580px;
   padding: 40px 300px 40px 80px;
 }
 .site-wrapper .image-wrapper-category .overlay {
   background-color: rgba(242, 230, 208, 0.65);
-  height: 520px;
+  height: 501px;
   padding: 30px;
 }
-.site-wrapper .image-wrapper-category .overlay h3 {
+.site-wrapper .image-wrapper-category .overlay h3, .create-card h3 {
   color: #d94e5a;
   padding-bottom: 40px;
 }
@@ -342,11 +345,15 @@ h3 {
   font-size: calc(1.52vw + 0.7rem);
 }
 /* ----------------------------- */
-.form-category, .form-card {
+.form-category, .form-card  {
   background-color: rgba(217, 78, 90, 0.8);
   padding: 40px 20px 20px;
-  width: 60%;
+  width: 47%;
   overflow: auto;
+}
+.create-card .form-card {
+ width: 100%;
+ height: 346px;
 }
 .form-category .input-box , .form-card .input-box  {
   position: relative;
@@ -360,6 +367,9 @@ h3 {
   outline: none;
   line-height: 0px;
   background: none;
+}
+.form-card .input-box input {
+  margin-bottom: 19px;
 }
 .form-category .input-box input:not(.browser-default):focus:not([readonly]),
 .form-card .input-box input:not(.browser-default):focus:not([readonly]) {
@@ -390,11 +400,15 @@ h3 {
   float: right;
   background-color: #2f1728;
   font-size: calc(0.14vw + 1rem);
+      border: none;
+    color: #f2e6d0;
+    border-radius: 6px;
 }
 .form-category .btn-category:disabled ,
 .form-card .btn-category:disabled {
   background-color: rgba(217, 217, 217, 0.15);
   color: #2f1728;
+  border: none;
 }
 /* ============================================= */
 .category-summary {
@@ -552,6 +566,109 @@ i,
 .category-summary .card:hover .pic {
   filter: grayscale(0);
 }
+footer {
+ position: relative;
+ bottom: -10px;
+ width: 100%;
+ margin: 0 auto;
+ padding:30px;
+ font-size: 13px;
+}
+/* -------------------------------------------------- */
+
+
+
+
+
+
+.App {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flashcard-viewer {
+	position: relative;
+	width: 100%;
+  display: flex;
+  background-color: #f2e6d0;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.flashcard-item-wrapper {
+	width: 100%;
+}
+
+.flashcard-item {
+	height: 0;
+	width: 100%;
+	padding-top: 60%;
+	margin: 0.5rem;
+	position: relative;
+	perspective: 1000px;
+}
+
+.flashcard-item-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: #2F1728 2px 2px 10px;
+  background: #f2e6d0;
+  color:#2F1728;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+}
+
+.flashcard-item-helper {
+	position: absolute;
+	font-size: 1.5rem;
+	color: #00000050;
+	top: 0;
+	left: 0;
+}
+
+.nav-buttons-wrapper {
+	color: #d94e5a;
+	font-size: 1.5rem;
+	margin: 1rem 0;
+}
+
+.nav-arrow-btn {
+	display: inline-block;
+	margin: 0 2rem;
+	cursor: pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 991px) {
   .container {
     padding-right: 0px;
