@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>LINKO</h1>
+We know now that the English language is important to everyone more than ever. So at LINKO, I provide pictorial flashcards for you to learn English vocabulary easily. which is one of the practices through which our brains learn most effectively.
+
+I created the Linko website using React.js, Router, Axios, and Firebase
+for styling, I used Bootstrap 4, Font-awesome.
 
 ## Available Scripts
 
